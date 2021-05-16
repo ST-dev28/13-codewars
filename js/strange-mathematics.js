@@ -25,16 +25,36 @@ strangeMath(15, 15) === 7
 */
 
 function strangeMath(n, k) {
-    let numbersList = 0; 
-    for (let i = 0; i <= n; i++) {
-        numbersList = i;
-        console.log(numbersList);
-
-        let lexicographicList = ;
-        console.log(lexicographicList);
-
+    let numbersList = []; 
+    for (let i = 1; i <= n; i++) {
+        numbersList.push(i);
+    }
+    return numbersList.sort().indexOf(k) + 1;
 }
+
+/* ARBA
+function strangeMath(n, k){
+  const arr = [0];
+  
+  for (let i = 1; i <= n; i++) {
+    arr.push(i)
+  }
+  
+  return arr.sort().indexOf(k)
 }
+
+---ARBA
+function strangeMath(n, k){
+  let arr = []
+  for (let i = 1; i <= n; i++){
+    arr.push(i);
+  }
+  arr.sort()
+  console.log(arr)
+  let ind = arr.indexOf(k);
+  return ind + 1
+}
+*/
 
 console.log(strangeMath(11, 2), '->', 4);
 console.log(strangeMath(15, 5), '->', 11);
