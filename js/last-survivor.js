@@ -18,18 +18,23 @@ There can be duplicate letters and numbers.
 */
 
 function lastSurvivor(letters, coords) {
-    let left = '';
-    for (let i = 0; i <= letters.length; i++) {
-        const left = letters.length;
+    letters = letters.split('');
+    for (let i = 0; i < coords.length; i++) {
+       letters.splice(coords[i], 1)
     }
-        return left;
-
-        
-
-
+    return letters.join('')
  }
 
-
+/* ARBA
+function lastSurvivor(letters, coords) {
+  let result = letters.split('');
+  for (let i of coords) {
+      result.splice(i, 1);
+  }
+  
+  return result.join('');
+}
+*/
 
 console.log(lastSurvivor('abc', [1, 1]), '->', 'a');
 console.log(lastSurvivor('kbc', [0, 1]), '->', 'b');
