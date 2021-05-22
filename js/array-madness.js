@@ -17,7 +17,7 @@ function arrayMadness(a, b) {
 
     }
     for (let i = 0; i < b.length; i++) {
-        const skaicius = b[i];                         // sumKvad += a[i] *** 3
+        const skaicius = b[i];                         // sumKub += a[i] *** 3
         sumKub += skaicius * skaicius * skaicius;      //arba -> skaicius *** 3
 
         }
