@@ -6,7 +6,7 @@ Your expected output is an array of positive integers from
 1 to n (inclusive).
 Your job is to write an algorithm that gets you from the 
 input to the output.
-
+*/
 
 function preFizz(n) {
     if (n === 0) return [];
@@ -33,26 +33,3 @@ var maxRedigit = function (n) {
     }
     if (n <= 0) return null;
 }
-*/
-
-var maxRedigit = function (n) {
-    let convertN = n.toString();
-    let newArray = convertN.split('');
-    let sortArray = newArray.sort();
-    let reversedArray = sortArray.reverse();
-    let joinArray = reversedArray.join('');
-    let stackedNumber = Number(joinArray);
-    if (n <= 0 || convertN.length > 3 || convertN.length <= 2) return null;
-    return stackedNumber;
-}
-
-
-console.log(maxRedigit(123), '->', 321, "123 => 321");
-console.log(maxRedigit(-1), '->', null, "-1 => null");
-console.log(maxRedigit(0001), '->', null, "0001 => null");
-console.log(maxRedigit(-98), '->', null, "-98 => null");
-console.log(maxRedigit(9598), '->', null, "9598 => null");
-console.log(maxRedigit(0), '->', null, "0 => null");
-console.log(maxRedigit(99), '->', null, "99 => null");
-console.log(maxRedigit(82), '->', null, "82 => null");
-console.log(maxRedigit(28), '->', 82, "28 => 82");
