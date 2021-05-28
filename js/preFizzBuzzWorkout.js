@@ -22,14 +22,3 @@ console.log(preFizz(2), '->', [1, 2], `Array should be from 1 to 2`);
 console.log(preFizz(3), '->', [1, 2, 3], `Array should be from 1 to 3`);
 console.log(preFizz(4), '->', [1, 2, 3, 4], `Array should be from 1 to 4`);
 console.log(preFizz(5), '->', [1, 2, 3, 4, 5], `Array should be from 1 to 5`);
-
-var maxRedigit = function (n) {
-    let strNum = n.toString();
-
-    if (n > 0) {
-        var n = n.toString().split('');
-        var descendingNumber = n.sort((a, b) => b - a).join('');
-        return descendingNumber;
-    }
-    if (n <= 0) return null;
-}
